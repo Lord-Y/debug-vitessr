@@ -17,6 +17,12 @@ x.then((response: any) => {
 // import * as config from './env.json'
 // const runtime: configObject = config
 
+
+// work in dev mode but fail in build because Top-level await is not available in the configured target environment ....
+// import axios from 'axios'
+// const { data } = await axios.get('http://localhost:3000/env.json')
+// const runtime: configObject = data
+
 const runtimeConfigSymbol = Symbol()
 
 export const runtimeConfig: Plugin = {
