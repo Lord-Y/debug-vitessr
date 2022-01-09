@@ -1,7 +1,7 @@
 import { App, Plugin } from 'vue'
 import { configObject } from '../apis/configs'
 
-// only for env.json from public directory
+// only for env.json from public directory, it's working but data are fetch after plugin is use/mounted causing error in browser console
 import axios from 'axios'
 async function getConfig(): Promise<any> {
   const { data } = await axios.get('http://localhost:3000/env.json')
